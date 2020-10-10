@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public void sayHello(View view) {
         Intent intent = new Intent(this, GreetingActivity.class);
         EditText mainName = findViewById(R.id.mainName);
-        String message = "Have a nice day, " + mainName.getText().toString() + " !";
+        String message = mainName.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
